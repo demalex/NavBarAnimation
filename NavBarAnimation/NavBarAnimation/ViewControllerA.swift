@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerA: UIViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
+class ViewControllerA: UIViewController, UINavigationControllerDelegate {
     
     override func loadView() {
         super.loadView()
@@ -24,7 +24,6 @@ class ViewControllerA: UIViewController, UIViewControllerTransitioningDelegate, 
         )
         
         navigationController?.delegate = self
-        navigationController?.transitioningDelegate = self
         navigationController?.navigationBar.setBackgroundImage(UIImage.fromColor(color: .lightGray), for: .default)
     }
     
