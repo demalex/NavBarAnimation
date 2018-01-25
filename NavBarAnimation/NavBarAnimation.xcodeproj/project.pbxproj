@@ -16,6 +16,7 @@
 		D086A110200EB09600A5A4FE /* ViewControllerB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086A10F200EB09600A5A4FE /* ViewControllerB.swift */; };
 		D086A112200EB0DA00A5A4FE /* UIImage+fromColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086A111200EB0DA00A5A4FE /* UIImage+fromColor.swift */; };
 		D086A114200EB14400A5A4FE /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086A113200EB14400A5A4FE /* CustomTransition.swift */; };
+		FA1BDFB6201927500094B4EB /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1BDFB5201927500094B4EB /* NavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		D086A10F200EB09600A5A4FE /* ViewControllerB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerB.swift; sourceTree = "<group>"; };
 		D086A111200EB0DA00A5A4FE /* UIImage+fromColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+fromColor.swift"; sourceTree = "<group>"; };
 		D086A113200EB14400A5A4FE /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
+		FA1BDFB5201927500094B4EB /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				D086A10F200EB09600A5A4FE /* ViewControllerB.swift */,
 				D086A113200EB14400A5A4FE /* CustomTransition.swift */,
 				D086A111200EB0DA00A5A4FE /* UIImage+fromColor.swift */,
+				FA1BDFB5201927500094B4EB /* NavigationBar.swift */,
 				D086A0E8200EAEFC00A5A4FE /* Assets.xcassets */,
 				D086A0EA200EAEFC00A5A4FE /* LaunchScreen.storyboard */,
 				D086A0ED200EAEFC00A5A4FE /* Info.plist */,
@@ -269,6 +272,7 @@
 				D086A114200EB14400A5A4FE /* CustomTransition.swift in Sources */,
 				D086A0E4200EAEFC00A5A4FE /* ViewControllerA.swift in Sources */,
 				D086A0E2200EAEFC00A5A4FE /* AppDelegate.swift in Sources */,
+				FA1BDFB6201927500094B4EB /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

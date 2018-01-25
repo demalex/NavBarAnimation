@@ -10,29 +10,26 @@ import UIKit
 
 class ViewControllerA: UIViewController, UINavigationControllerDelegate {
     
-    override func loadView() {
-        super.loadView()
-        title = "A"
-        extendedLayoutIncludesOpaqueBars = true
-        view.backgroundColor = .lightGray
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "NEXT",
-            style: .plain,
-            target: self,
-            action: #selector(showController)
-        )
-        
-        navigationController?.delegate = self
-        navigationController?.navigationBar.setBackgroundImage(UIImage.fromColor(color: .lightGray), for: .default)
-    }
-    
     @objc func showController() {
         let vc = ViewControllerB()
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CustomTransition(isPresenting: operation == .push)
-    }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    title = "A"
+    view.backgroundColor = .lightGray
+    extendedLayoutIncludesOpaqueBars = true
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      title: "NEXT",
+      style: .plain,
+      target: self,
+      action: #selector(showController)
+    )
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.navigationBar.setBackgroundImage(UIImage.fromColor(color: .lightGray), for: .default)
+  }
 }

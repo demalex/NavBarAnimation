@@ -9,11 +9,16 @@
 import UIKit
 
 class ViewControllerB: UIViewController {
-    
-    override func loadView() {
-        super.loadView()
-        title = "B"
-        extendedLayoutIncludesOpaqueBars = true
-        view.backgroundColor = .yellow
-    }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    title = "B"
+    extendedLayoutIncludesOpaqueBars = true
+    view.backgroundColor = .yellow
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.navigationBar.setBackgroundImage(UIImage.fromColor(color: .yellow), for: .default)
+  }
 }

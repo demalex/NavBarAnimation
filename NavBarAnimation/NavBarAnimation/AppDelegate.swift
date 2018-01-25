@@ -16,10 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
         let vc = ViewControllerA()
-        let navigationController = UINavigationController(rootViewController: vc)
+        let navigationController = UINavigationController(navigationBarClass: NavigationBar.self, toolbarClass: nil)
+        navigationController.delegate = self
+        navigationController.setViewControllers([vc], animated: false)
         window!.rootViewController = navigationController
         window!.makeKeyAndVisible()
         return true
     }
+}
+
+extension AppDelegate: UINavigationControllerDelegate {
+  func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    return CustomTransition(isPresenting: operation == .push)
+  }
 }
 
