@@ -48,6 +48,7 @@ class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
     viewTransition.duration = CFTimeInterval(self.duration)
     viewTransition.fromValue = CATransform3DTranslate(toView.layer.transform, container.layer.bounds.width, 0, 0)
     viewTransition.toValue = CATransform3DIdentity
+    viewTransition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
     
     self.beginLayerAnimations({
       let imageView = toVC.navigationController?.navigationBar.subviews[0]
@@ -100,6 +101,7 @@ class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
     viewTransition.duration = CFTimeInterval(self.duration)
     viewTransition.fromValue = CATransform3DIdentity
     viewTransition.toValue = fromViewFinalTransform
+    viewTransition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
 
     self.beginLayerAnimations({
       let imageView = toVC.navigationController?.navigationBar.subviews[0]
@@ -127,6 +129,7 @@ class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
     transition.duration = CFTimeInterval(self.duration)
     transition.type = kCATransitionPush
     transition.subtype = self.isPresenting ? kCATransitionFromRight : kCATransitionFromLeft
+    transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
     return transition
   }
 }
