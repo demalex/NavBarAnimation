@@ -91,6 +91,7 @@ class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
     if let fromViewWrapped = fromView {
       fromViewWrapped.frame = fromViewInitialFrame
       fromViewFinalTransform = CATransform3DTranslate(fromViewWrapped.layer.transform, container.layer.bounds.width, 0, 0)
+      fromViewWrapped.layer.transform = fromViewFinalTransform
     }
     
     let navBarTransition = self.navigationbarTransitionAnimation()
@@ -99,7 +100,7 @@ class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
     viewTransition.duration = CFTimeInterval(self.duration)
     viewTransition.fromValue = CATransform3DIdentity
     viewTransition.toValue = fromViewFinalTransform
-    
+
     self.beginLayerAnimations({
       let imageView = toVC.navigationController?.navigationBar.subviews[0]
       imageView?.layer.add(navBarTransition, forKey: nil)
